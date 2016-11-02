@@ -1,7 +1,7 @@
 import DS from 'ember-data';
 
 export default DS.RESTAdapter.extend({
-  host: 'http://4cf36b67.ngrok.io/',
+  host: 'http://4cf36b67.ngrok.io/usuario/create',
   namespace 'usuario/create'
   // Application specific overrides go here
 });
