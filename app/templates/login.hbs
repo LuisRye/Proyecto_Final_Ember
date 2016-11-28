@@ -1,34 +1,32 @@
+<br>
+<br>
 <div class='row'>
+    <div class="col-sm-4 col-sm-offset-10">
+        <div class="form-group">
+             {{#link-to 'registrar' class="button"}}
+            {{input type = "button" class="btn btn-warning btn-lg center" value="Registrarse"}}
+            {{/link-to}}
+        </div>
+    </div>
     <div class="col-sm-4 col-sm-offset-4">
-
-
-
-
 
         <form {{action 'doLogin' username password on= 'submit'}} class="well">
             <div class="form-group">
                 <label>Username</label>
-                {{input value=username class="form-control"}}       
+                {{input value=model.username class="form-control"}}       
             </div>
 
             <div class="form-group">
                 <label>Password</label>
-                {{input value=password type="password" class="form-control"}}           
+                {{input value=model.password type="password" class="form-control"}}           
             </div>
             <p class="text-center">
+                {{input type = "button" class="btn btn-primary btn-lg center" value="Login" action="saveData(model)"}}
                 
-                {{#link-to 'home' class="button"}}
-                <button type = "submit" class="btn btn-primary btn-lg center">Login</button>
-                {{/link-to}}
-                {{#link-to 'registrar' class="button"}}
-                <button type = "submit" class="btn btn-primary btn-lg center">Registrarse</button>
-                {{/link-to}}
-                
-            
-            </p>
-            
-                
+               
+            </p>                
         </form>
+
 
 
 

@@ -1,6 +1,16 @@
 import DS from 'ember-data';
 
 export default DS.RESTAdapter.extend({
-  host: 'http://4cf36b67.ngrok.io/evento/create'
-  // Application specific overrides go here
+  
+  host: 'http://localhost:3000',
+  urlForCreateRecord(){
+    return  `/evento/create_evento`;
+  }, 
+
+  urlForFindAll(){
+  	return "lista";
+  },
+  urlForFindRecord (id, modelName, snapshot){
+  	return `/verEvento/${id}`;
+  }
 });

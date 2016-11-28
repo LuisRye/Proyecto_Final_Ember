@@ -1,6 +1,8 @@
 import DS from 'ember-data';
 
 export default DS.RESTAdapter.extend({
-  host: 'http://4cf36b67.ngrok.io/usuario/create'
-  // Application specific overrides go here
+  host: 'http://localhost:3000',
+  urlForCreateRecord(){
+    return  `/usuario/create`;
+  }
 });
